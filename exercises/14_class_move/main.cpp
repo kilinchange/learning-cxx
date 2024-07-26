@@ -23,6 +23,7 @@ public:
             return *this;
         cache = std::exchange(other.cache, nullptr);
         cached = std::exchange(other.cached, 0);
+        return *this;
     }
 
     // TODO: 实现析构器，释放缓存空间
